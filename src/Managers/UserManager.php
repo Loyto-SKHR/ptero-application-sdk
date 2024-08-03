@@ -8,12 +8,12 @@ use SKHR\PteroAPI\Resources\User;
 class UserManager extends Manager {
 
     /**
-     * Get paginated collection of users
+     * Get paginated list of users
      *
      * @param int $page
      * @param array $query
      *
-     * @return Collection
+     * @return RessourceList
      */
     public function paginate($page = 1, $query = []) {
         return $this->pteroAPI->http->get('users', array_merge([

@@ -21,7 +21,7 @@ class Resource implements ArrayAccess, JsonSerializable, Serializable {
      *
      * @var array
      */
-    protected $attributes;
+    public $attributes;
 
     /**
      * Origin attributes.

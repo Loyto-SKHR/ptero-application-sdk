@@ -8,12 +8,12 @@ use SKHR\PteroAPI\Resources\Node;
 class NodeManager extends Manager {
 
     /**
-     * Get a paginated collection of nodes
+     * Get a paginated list of nodes
      *
      * @param int $page
      * @param array $query
      *
-     * @return Collection
+     * @return RessourceList
      */
     public function paginate($page = 1, $query = []) {
         return $this->pteroAPI->http->get('nodes', array_merge([
