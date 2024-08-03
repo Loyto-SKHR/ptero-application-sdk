@@ -1,0 +1,16 @@
+{
+    "name": "skhr/ptero-application-sdk",
+    "description": "Pterodactyl application PHP SDK",
+    "keywords": ["pterodactyl", "sdk", "php"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lucas AVELINO",
+            "email": "l.avelino@skhr.fr"
+        }
+    ],
+    "require": {
+        "php": ">=8.3",
+        "guzzlehttp/guzzle": "^7.9"
+    }
+}
