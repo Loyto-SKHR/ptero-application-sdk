@@ -79,3 +79,5 @@ class UserManager extends Manager {
         return $this->pteroAPI->http->delete("users/$userId");
     }
 }
+
+?>

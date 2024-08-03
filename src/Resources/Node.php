@@ -69,3 +69,5 @@ class Node extends Resource {
         $this->pteroAPI->allocations->delete($this->id, $id);
     }
 }
+
+?>

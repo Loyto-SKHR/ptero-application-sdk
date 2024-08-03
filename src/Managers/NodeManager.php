@@ -79,3 +79,5 @@ class NodeManager extends Manager {
         $this->pteroAPI->http->delete("nodes/$nodeId");
     }
 }
+
+?>

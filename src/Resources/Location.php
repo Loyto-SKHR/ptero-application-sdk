@@ -29,3 +29,5 @@ class Location extends Resource {
         $this->pteroAPI->locations->delete($this->id);
     }
 }
+
+?>

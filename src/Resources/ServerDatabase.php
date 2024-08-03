@@ -26,3 +26,5 @@ class ServerDatabase extends Resource {
         $this->pteroAPI->databases->delete($this->server, $this->id);
     }
 }
+
+?>

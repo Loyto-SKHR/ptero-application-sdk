@@ -67,3 +67,5 @@ class LocationManager extends Manager {
         $this->pteroAPI->http->delete("locations/$locationId");
     }
 }
+
+?>

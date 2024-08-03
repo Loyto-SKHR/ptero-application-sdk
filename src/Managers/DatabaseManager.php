@@ -72,3 +72,5 @@ class DatabaseManager extends Manager {
         $this->pteroAPI->http->delete("servers/$serverId/databases/$databaseId");
     }
 }
+
+?>

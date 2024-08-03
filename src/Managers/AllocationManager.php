@@ -46,3 +46,5 @@ class AllocationManager extends Manager {
         $this->http->pteroAPI->delete("nodes/$nodeId/allocations/$allocationId");
     }
 }
+
+?>
