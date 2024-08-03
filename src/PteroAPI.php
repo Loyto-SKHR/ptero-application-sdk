@@ -4,6 +4,7 @@ namespace SKHR\PteroAPI;
 
 use GuzzleHttp\Client as Client;
 use SKHR\PteroAPI\Managers\UserManager;
+use SKHR\PteroAPI\Managers\NodeManager;
 use SKHR\PteroAPI\Managers\ServerManager;
 
 class PteroAPI {
@@ -22,6 +23,13 @@ class PteroAPI {
     public $users;
 
     /**
+     * The node manager.
+     *
+     * @var NodeManager
+     */
+    public $nodes;
+
+    /**
      * The server manager.
      *
      * @var ServerManager
@@ -38,6 +46,7 @@ class PteroAPI {
         $this->http = new Http($baseURI, $apiKey, $this);
 
         $this->users = new UserManager($this);
+        $this->nodes = new UserManager($this);
         $this->servers = new ServerManager($this);
     }
 }
