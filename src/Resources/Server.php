@@ -23,7 +23,7 @@ class Server extends Resource {
      * @return void
      */
     public function updateBuild($data) {
-        return $this->pteroAPI->servers->updateBuild($this->id, $data);
+        $this->pteroAPI->servers->updateBuild($this->id, $data);
     }
 
     /**
@@ -34,7 +34,7 @@ class Server extends Resource {
      * @return void
      */
     public function updateStartup($data) {
-        return $this->pteroAPI->servers->updateStartup($this->id, $data);
+        $this->pteroAPI->servers->updateStartup($this->id, $data);
     }
 
     /**
@@ -43,7 +43,7 @@ class Server extends Resource {
      * @return void
      */
     public function suspend() {
-        return $this->pteroAPI->servers->suspend($this->id);
+        $this->pteroAPI->servers->suspend($this->id);
     }
 
     /**
@@ -52,7 +52,7 @@ class Server extends Resource {
      * @return void
      */
     public function unsuspend() {
-        return $this->pteroAPI->servers->unsuspend($this->id);
+        $this->pteroAPI->servers->unsuspend($this->id);
     }
 
     /**
@@ -61,7 +61,7 @@ class Server extends Resource {
      * @return void
      */
     public function reinstall() {
-        return $this->pteroAPI->servers->reinstall($this->id);
+        $this->pteroAPI->servers->reinstall($this->id);
     }
 
     /**
@@ -72,7 +72,7 @@ class Server extends Resource {
      * @return void
      */
     public function delete($force = false) {
-        return $this->pteroAPI->servers->delete($this->id, $force);
+        $this->pteroAPI->servers->delete($this->id, $force);
     }
 }
 

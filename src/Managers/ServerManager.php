@@ -54,7 +54,7 @@ class ServerManager extends Manager {
      * @return void
      */
     public function updateDetails($serverId, $data) {
-        return $this->pteroAPI->http->patch("servers/$serverId/details", [], $data);
+        $this->pteroAPI->http->patch("servers/$serverId/details", [], $data);
     }
 
     /**
@@ -66,7 +66,7 @@ class ServerManager extends Manager {
      * @return void
      */
     public function updateBuild($serverId, $data) {
-        return $this->pteroAPI->http->patch("servers/$serverId/build", [], $data);
+        $this->pteroAPI->http->patch("servers/$serverId/build", [], $data);
     }
 
     /**
@@ -78,7 +78,7 @@ class ServerManager extends Manager {
      * @return void
      */
     public function updateStartup($serverId, $data) {
-        return $this->pteroAPI->http->patch("servers/$serverId/startup", [], $data);
+        $this->pteroAPI->http->patch("servers/$serverId/startup", [], $data);
     }
 
     /**
@@ -100,7 +100,7 @@ class ServerManager extends Manager {
      * @return void
      */
     public function suspend($serverId) {
-        return $this->pteroAPI->http->post("servers/$serverId/suspend");
+        $this->pteroAPI->http->post("servers/$serverId/suspend");
     }
 
     /**
@@ -111,7 +111,7 @@ class ServerManager extends Manager {
      * @return void
      */
     public function unsuspend($serverId) {
-        return $this->pteroAPI->http->post("servers/$serverId/unsuspend");
+        $this->pteroAPI->http->post("servers/$serverId/unsuspend");
     }
 
     /**
@@ -122,7 +122,7 @@ class ServerManager extends Manager {
      * @return void
      */
     public function reinstall($serverId) {
-        return $this->pteroAPI->http->post("servers/$serverId/reinstall");
+        $this->pteroAPI->http->post("servers/$serverId/reinstall");
     }
 
     /**
@@ -134,7 +134,7 @@ class ServerManager extends Manager {
      * @return void
      */
     public function delete($serverId, $force = false) {
-        return $this->pteroAPI->http->delete("servers/$serverId".($force ? "/force" : ""));
+        $this->pteroAPI->http->delete("servers/$serverId".($force ? "/force" : ""));
     }
 
 }
