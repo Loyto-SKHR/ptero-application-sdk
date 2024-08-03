@@ -9,6 +9,8 @@ use SKHR\PteroAPI\Managers\AllocationManager;
 use SKHR\PteroAPI\Managers\LocationManager;
 use SKHR\PteroAPI\Managers\ServerManager;
 use SKHR\PteroAPI\Managers\DatabaseManager;
+use SKHR\PteroAPI\Managers\NestManager;
+use SKHR\PteroAPI\Managers\EggManager;
 
 class PteroAPI {
     /**
@@ -61,6 +63,20 @@ class PteroAPI {
     public $databases;
 
     /**
+     * The server manager.
+     *
+     * @var NestManager
+     */
+    public $nests;
+
+    /**
+     * The server manager.
+     *
+     * @var EggManager
+     */
+    public $eggs;
+
+    /**
      * Create a new PteroAPI instance
      * 
      * @param string $baseURI
@@ -75,6 +91,8 @@ class PteroAPI {
         $this->locations = new LocationManager($this);
         $this->servers = new ServerManager($this);
         $this->databases = new DatabaseManager($this);
+        $this->nests = new NestManager($this);
+        $this->eggs = new EggManager($this);
     }
 }
 
