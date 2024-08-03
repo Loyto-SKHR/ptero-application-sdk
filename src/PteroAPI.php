@@ -6,6 +6,7 @@ use GuzzleHttp\Client as Client;
 use SKHR\PteroAPI\Managers\UserManager;
 use SKHR\PteroAPI\Managers\NodeManager;
 use SKHR\PteroAPI\Managers\AllocationManager;
+use SKHR\PteroAPI\Managers\LocationManager;
 use SKHR\PteroAPI\Managers\ServerManager;
 
 class PteroAPI {
@@ -38,6 +39,13 @@ class PteroAPI {
     public $allocations;
 
     /**
+     * The location manager.
+     *
+     * @var LocationManager
+     */
+    public $locations;
+
+    /**
      * The server manager.
      *
      * @var ServerManager
@@ -56,6 +64,7 @@ class PteroAPI {
         $this->users = new UserManager($this);
         $this->nodes = new UserManager($this);
         $this->allocations = new AllocationManager($this);
+        $this->locations = new LocationManager($this);
         $this->servers = new ServerManager($this);
     }
 }
