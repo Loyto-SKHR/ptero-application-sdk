@@ -77,6 +77,9 @@ class Http {
             $response['data'] = array_map(function ($object) {
                 return $this->transform($object);
             }, $response['data']);
+
+            //Rename because the name List is not acceptable for the Class
+            $response['object'] = "RessourceList";
         }
 
         if (isset($response['attributes']['relationships'])) {
