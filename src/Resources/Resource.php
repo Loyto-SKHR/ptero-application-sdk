@@ -92,26 +92,39 @@ class Resource implements ArrayAccess, JsonSerializable, Serializable {
         unset($this->attributes[$offset]);
     }
 
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset) {
         return $this->offsetExists($offset) ? $this->get($offset) : null;
     }
 
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value) {
         $this->set($offset, $value);
     }
 
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset) {
         if ($this->offsetExists($offset)) {
             $this->forget($offset);
         }
     }
 
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset) {
         return $this->has($offset);
     }
 
+    #[\ReturnTypeWillChange]
     public function jsonSerialize() {
         return $this->attributes;
+    }
+
+    public function __serialize() {
+        return serialize($this->attributes);
+    }
+
+    public function __unserialize($serialized) {
+        return $this->attributes = unserialize($serialized);
     }
 
     public function serialize() {
