@@ -21,7 +21,7 @@ class Resource implements ArrayAccess, JsonSerializable, Serializable {
      *
      * @var array
      */
-    public $attributes;
+    protected $attributes;
 
     /**
      * Origin attributes.
@@ -92,30 +92,25 @@ class Resource implements ArrayAccess, JsonSerializable, Serializable {
         unset($this->attributes[$offset]);
     }
 
-    #[\ReturnTypeWillChange]
-    public function offsetGet($offset) {
+    public function offsetGet($offset) : mixed {
         return $this->offsetExists($offset) ? $this->get($offset) : null;
     }
 
-    #[\ReturnTypeWillChange]
-    public function offsetSet($offset, $value) {
+    public function offsetSet($offset, $value) : void {
         $this->set($offset, $value);
     }
 
-    #[\ReturnTypeWillChange]
-    public function offsetUnset($offset) {
+    public function offsetUnset($offset) : void {
         if ($this->offsetExists($offset)) {
             $this->forget($offset);
         }
     }
 
-    #[\ReturnTypeWillChange]
-    public function offsetExists($offset) {
+    public function offsetExists($offset) : bool {
         return $this->has($offset);
     }
 
-    #[\ReturnTypeWillChange]
-    public function jsonSerialize() {
+    public function jsonSerialize() : array {
         return $this->attributes;
     }
 
