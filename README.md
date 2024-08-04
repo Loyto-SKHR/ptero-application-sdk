@@ -38,5 +38,9 @@ You can get support by [submitting new issue](https://github.com/Loyto-SKHR/pter
 `skhr/ptero-application-sdk` is licensed under the MIT License (MIT). 
 Please see the [license file](LICENSE.md) for more information.
 
+[ico-version]: https://img.shields.io/packagist/v/skhr/ptero-application-sdk.svg
+[ico-downloads]: https://img.shields.io/packagist/dt/skhr/ptero-application-sdk.svg
+[ico-license]: https://img.shields.io/badge/license-MIT-green.svg
+
 [link-packagist]: https://packagist.org/packages/skhr/ptero-application-sdk
 [link-downloads]: https://packagist.org/packages/skhr/ptero-application-sdk
