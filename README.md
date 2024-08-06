@@ -20,7 +20,9 @@ require_once("vendor/autoload.php");
 Finally, create an instance of the SDK:
 
 ```php
-$pteroAPI = new \SKHR\PteroAPI\PteroAPI("<baseURI>", "<apiKey>");
+use \SKHR\PteroAPI\PteroAPI;
+
+$pteroAPI = new PteroAPI("<baseURI>", "<apiKey>");
 ```
 
 You can then call the application API.
