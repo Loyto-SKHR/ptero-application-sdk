@@ -86,7 +86,7 @@ class PteroAPI {
         $this->http = new Http($baseURI, $apiKey, $this);
 
         $this->users = new UserManager($this);
-        $this->nodes = new UserManager($this);
+        $this->nodes = new NodeManager($this);
         $this->allocations = new AllocationManager($this);
         $this->locations = new LocationManager($this);
         $this->servers = new ServerManager($this);
