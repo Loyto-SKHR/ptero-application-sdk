@@ -54,7 +54,7 @@ class Node extends Resource {
      * 
      * @return Allocation
      */
-    public function createAllocations($data) {
+    public function createAllocation($data) {
         return $this->pteroAPI->allocations->create($this->id, $data);
     }
 
@@ -65,7 +65,7 @@ class Node extends Resource {
      * 
      * @return void
      */
-    public function deleteAllocations($id) {
+    public function deleteAllocation($id) {
         $this->pteroAPI->allocations->delete($this->id, $id);
     }
 }
